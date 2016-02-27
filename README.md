@@ -10,7 +10,7 @@ Create Datacontainer:
     $ docker run --rm -it --volumes-from ts3_data axeclbr/workbench
     # Inside Container do:
     $ touch /data/ts3server.sqlitedb
-    $ chmod -R 503:503 /data
+    $ chown -R 503:503 /data
     $ exit
 
 Run:
