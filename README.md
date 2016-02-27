@@ -14,6 +14,7 @@ Create Datacontainer:
     $ exit
 
 Run:
+
     docker run -d --net=host --name ts3 \
     --volumes-from ts3_data \
     axeclbr/teamspeak \
