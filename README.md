@@ -6,11 +6,12 @@ TS3-Server in Docker
 
 Create Datacontainer:
 
-    $> docker create -v /data --name ts3_data axeclbr/data /bin/true
-    $> docker run --rm -it --volumes-from ts3_data axeclbr/workbench
-    #> touch /data/ts3server.sqlitedb
-    #> chmod -R 503:503 /data
-    #> exit
+    $ docker create -v /data --name ts3_data axeclbr/data /bin/true
+    $ docker run --rm -it --volumes-from ts3_data axeclbr/workbench
+    # Inside Container do:
+    $ touch /data/ts3server.sqlitedb
+    $ chmod -R 503:503 /data
+    $ exit
 
 Run:
     docker run -d --net=host --name ts3 \
