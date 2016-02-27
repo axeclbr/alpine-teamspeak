@@ -1,6 +1,6 @@
 FROM orimani/alpine-glibc
 
-MAINTAINER Mat <mat@orimani.info>
+MAINTAINER axeclbr <axeclbr@posteo.de>
 
 RUN export \
     TS_CHECKSUM="51eff1023549140fec592cb140edb0670c11cbf9" \
