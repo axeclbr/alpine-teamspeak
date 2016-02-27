@@ -13,6 +13,7 @@ RUN export \
  && mv /opt/teamspeak3-server_* /opt/teamspeak \
  && addgroup -g 503 teamspeak \
  && adduser -u 503 -G teamspeak -h /opt/teamspeak -S -D teamspeak \
+ && ln -s /data/ts3server.sqlitedb /opt/teamspeak/ts3server.sqlitedb \
  && chown -R teamspeak:teamspeak /opt/teamspeak \
  && apk del curl \
  && rm -rf \
@@ -24,3 +25,4 @@ EXPOSE 9987/udp 10011 30033
 USER teamspeak
 
 ENTRYPOINT ["/opt/teamspeak/ts3server_minimal_runscript.sh"]
+
